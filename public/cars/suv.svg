@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="SUV illustration">
+  <rect width="800" height="400" fill="#eef2f7"/>
+  <g fill="none" stroke="#1a61f5" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M140 272h520"/>
+    <path d="M162 272c0-44 22-64 58-72l104-20c24-5 46-5 70 0l168 32c44 9 68 30 68 60"/>
+    <path d="M262 180l24-38c8-13 22-20 38-20h92c18 0 34 8 44 22l22 30"/>
+    <path d="M240 272v-12M628 272v-12"/>
+  </g>
+  <g fill="#1a61f5">
+    <circle cx="262" cy="276" r="42"/>
+    <circle cx="612" cy="276" r="42"/>
+  </g>
+  <g fill="#eef2f7">
+    <circle cx="262" cy="276" r="16"/>
+    <circle cx="612" cy="276" r="16"/>
+  </g>
+</svg>

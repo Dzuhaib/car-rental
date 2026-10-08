@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Economy car illustration">
+  <rect width="800" height="400" fill="#eef2f7"/>
+  <g fill="none" stroke="#4d596b" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 268h500"/>
+    <path d="M170 268c0-40 24-62 62-68l120-22c22-4 44-4 66 0l150 30c46 8 70 30 70 60v0"/>
+    <path d="M300 178l30-42c8-10 20-16 34-16h84c16 0 30 6 40 18l28 34"/>
+    <path d="M250 268v-14M620 268v-14"/>
+  </g>
+  <g fill="#4d596b">
+    <circle cx="265" cy="272" r="38"/>
+    <circle cx="620" cy="272" r="38"/>
+  </g>
+  <g fill="#eef2f7">
+    <circle cx="265" cy="272" r="14"/>
+    <circle cx="620" cy="272" r="14"/>
+  </g>
+</svg>

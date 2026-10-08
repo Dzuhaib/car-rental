@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Luxury car illustration">
+  <rect width="800" height="400" fill="#f2eef8"/>
+  <g fill="none" stroke="#21252e" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M130 268h540"/>
+    <path d="M156 268c0-38 24-60 62-66l132-24c24-4 48-4 72 0l138 26c46 9 70 32 70 64"/>
+    <path d="M286 178l28-40c9-12 24-18 40-18h88c18 0 34 7 45 20l26 34"/>
+    <path d="M234 268v-12M634 268v-12"/>
+  </g>
+  <g fill="#21252e">
+    <circle cx="262" cy="272" r="40"/>
+    <circle cx="612" cy="272" r="40"/>
+  </g>
+  <g fill="#f2eef8">
+    <circle cx="262" cy="272" r="15"/>
+    <circle cx="612" cy="272" r="15"/>
+  </g>
+</svg>

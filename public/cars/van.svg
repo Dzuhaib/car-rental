@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Van illustration">
+  <rect width="800" height="400" fill="#eaf3ee"/>
+  <g fill="none" stroke="#31855c" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 276h500"/>
+    <path d="M172 276v-96c0-16 12-28 28-28h318c22 0 42 10 56 28l58 72c6 8 10 16 10 24v0"/>
+    <path d="M320 152v124M420 152v124"/>
+    <path d="M232 176h56v40h-56z"/>
+    <path d="M250 276v-10M618 276v-10"/>
+  </g>
+  <g fill="#31855c">
+    <circle cx="272" cy="280" r="40"/>
+    <circle cx="596" cy="280" r="40"/>
+  </g>
+  <g fill="#eaf3ee">
+    <circle cx="272" cy="280" r="15"/>
+    <circle cx="596" cy="280" r="15"/>
+  </g>
+</svg>
