@@ -14,13 +14,9 @@ export const metadata: Metadata = {
     "Send your trip details on WhatsApp and get an instant quote for chauffeur-driven car rental in Karachi — airport transfers, corporate travel, weddings, and outstation journeys.",
 };
 
-type SearchParams = Record<string, string | string[] | undefined>;
+type BookingPageProps = PageProps<"/booking">;
 
-type BookingPanelProps = {
-  searchParams?: Promise<SearchParams>;
-};
-
-export default function BookingPage() {
+export default function BookingPage({ searchParams }: BookingPageProps) {
   return (
     <>
       <PageHeader
@@ -31,15 +27,19 @@ export default function BookingPage() {
 
       <Container className="py-12">
         <Suspense fallback={<BookingForm />}>
-          <BookingPanel />
+          <BookingPanel searchParams={searchParams} />
         </Suspense>
       </Container>
     </>
   );
 }
 
-async function BookingPanel({ searchParams }: BookingPanelProps) {
-  const params = (await searchParams) ?? {};
+async function BookingPanel({
+  searchParams,
+}: {
+  searchParams: BookingPageProps["searchParams"];
+}) {
+  const params = await searchParams;
 
   function firstValue(
     value: string | string[] | undefined,

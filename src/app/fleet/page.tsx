@@ -33,11 +33,9 @@ const filters: { value: "all" | VehicleCategory; label: string }[] = [
   })),
 ];
 
-type FleetResultsProps = {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
-};
+type FleetPageProps = PageProps<"/fleet">;
 
-export default function FleetPage() {
+export default function FleetPage({ searchParams }: FleetPageProps) {
   return (
     <>
       <PageHeader
@@ -48,15 +46,19 @@ export default function FleetPage() {
 
       <Container className="py-12">
         <Suspense fallback={null}>
-          <FleetResults />
+          <FleetResults searchParams={searchParams} />
         </Suspense>
       </Container>
     </>
   );
 }
 
-async function FleetResults({ searchParams }: FleetResultsProps) {
-  const params = (await searchParams) ?? {};
+async function FleetResults({
+  searchParams,
+}: {
+  searchParams: FleetPageProps["searchParams"];
+}) {
+  const params = await searchParams;
   const requested = Array.isArray(params.category)
     ? params.category[0]
     : params.category;
