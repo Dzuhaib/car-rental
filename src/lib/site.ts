@@ -1,13 +1,13 @@
 export const SITE_YEAR = 2026;
 
 export const BRAND = {
-  name: "Karachi Rental Car",
-  short: "KRC",
+  name: "Burhan Rent A Car",
+  short: "Burhan",
   tagline: "Rent a Car in Karachi with Driver",
   phoneDisplay: "+92 333 2666690",
   phoneHref: "tel:+923332666690",
   whatsapp: "923332666690",
-  email: "info@karachirentalcar.pk",
+  email: "info@burhanrentacar.pk",
   rating: "4.9",
   trips: "5,000+",
 } as const;

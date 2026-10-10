@@ -13,16 +13,16 @@ import {
   vehicles,
   type VehicleCategory,
 } from "@/lib/fleet";
-import { whatsappLink } from "@/lib/site";
+import { BRAND, whatsappLink } from "@/lib/site";
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I would like help choosing a car with driver for my trip.",
+  `Hello ${BRAND.name}, I would like help choosing a car with driver for my trip.`,
 );
 
 export const metadata: Metadata = {
   title: "Our chauffeur-driven fleet",
   description:
-    "Browse economy cars, executive sedans, SUVs, luxury saloons, and vans from Karachi Rental Car. Daily rates with chauffeur included across Karachi and outstation routes.",
+    `Browse economy cars, executive sedans, SUVs, luxury saloons, and vans from ${BRAND.name}. Daily rates with chauffeur included across Karachi and outstation routes.`,
 };
 
 const filters: { value: "all" | VehicleCategory; label: string }[] = [

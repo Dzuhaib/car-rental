@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BRAND } from "@/lib/site";
 
 import "./globals.css";
 
@@ -17,17 +18,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://karachirentalcar.pk"),
+  metadataBase: new URL("https://burhanrentacar.pk"),
   title: {
-    default: "Rent a Car in Karachi with Driver | Karachi Rental Car",
-    template: "%s | Karachi Rental Car",
+    default: `Rent a Car in Karachi with Driver | ${BRAND.name}`,
+    template: `%s | ${BRAND.name}`,
   },
   description:
     "Chauffeur-driven car rental in Karachi: 24/7 airport pick & drop at Jinnah International Airport, corporate and executive travel, wedding VIP transport, and inter-city journeys. Transparent pricing and flexible daily, weekly, or monthly packages.",
   openGraph: {
     type: "website",
-    siteName: "Karachi Rental Car",
-    title: "Rent a Car in Karachi with Driver | Karachi Rental Car",
+    siteName: BRAND.name,
+    title: `Rent a Car in Karachi with Driver | ${BRAND.name}`,
     description:
       "Chauffeur-driven car rental in Karachi. 24/7 airport pickups, corporate travel, wedding VIP transport, and inter-city journeys.",
   },

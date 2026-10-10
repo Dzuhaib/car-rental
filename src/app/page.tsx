@@ -13,9 +13,9 @@ import { getFeaturedVehicles } from "@/lib/fleet";
 import { BRAND, serviceAreas, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Rent a Car in Karachi with Driver | Karachi Rental Car",
-  description:
-    "Karachi Rental Car provides chauffeur-driven car rental in Karachi: 24/7 airport pick & drop at Jinnah International Airport, corporate and executive travel, wedding VIP transport, and inter-city journeys to Lahore, Islamabad and Northern Pakistan.",
+title: `Rent a Car in Karachi with Driver | ${BRAND.name}`,
+    description:
+      `${BRAND.name} provides chauffeur-driven car rental in Karachi: 24/7 airport pick & drop at Jinnah International Airport, corporate and executive travel, wedding VIP transport, and inter-city journeys to Lahore, Islamabad and Northern Pakistan.`,
   alternates: { canonical: "/" },
 };
 
@@ -114,7 +114,7 @@ const testimonials = [
   },
   {
     quote:
-      "Absolutely brilliant team. Perfect service. Extremely happy with Karachi Rental Car.",
+      "Absolutely brilliant team. Perfect service. Extremely happy with Burhan Rent A Car.",
     name: "Murtaza Bukhari",
     detail: "Luxury wedding car rental, United Kingdom",
   },
@@ -165,7 +165,7 @@ const faqs = [
 ];
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I would like to rent a car with driver in Karachi. Please share availability and rates.",
+  `Hello ${BRAND.name}, I would like to rent a car with driver in Karachi. Please share availability and rates.`,
 );
 
 export default function Home() {
@@ -183,7 +183,7 @@ export default function Home() {
               Rent a Car in Karachi with Driver
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-ink-600">
-              Karachi Rental Car delivers professional, chauffeur-driven
+              {BRAND.name} delivers professional, chauffeur-driven
               transportation for residents, corporate clients, families, and
               international travellers across Pakistan. Our fleet ranges from
               economical sedans and executive vehicles to premium SUVs, Mercedes
@@ -259,7 +259,7 @@ export default function Home() {
       <Section
         tone="muted"
         eyebrow="Why choose us"
-        title="Why Choose Our Chauffeur-Driven Service with Karachi Rental Car?"
+        title="Why Choose Our Chauffeur-Driven Service with Burhan Rent A Car?"
         description="Navigating Karachi's traffic is a challenge — let our experts handle the road while you focus on your day. A top rated rent a car service in Karachi."
       >
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -348,15 +348,14 @@ export default function Home() {
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div className="space-y-5 leading-7 text-ink-600">
             <p>
-              Karachi Rental Car Company is a top-rated and trusted car rental
+              {BRAND.name} is a top-rated and trusted car rental
               service in Karachi. Our mission is simple: we do our job with
               dedication and keep every client happy. We offer clean cars, quick
               service, and honest communication.
             </p>
             <p>
               You can rent a car for business, travel, events, or family trips.
-              At Karachi Rental Car Company, your comfort and satisfaction come
-              first.
+              At {BRAND.name}, your comfort and satisfaction come first.
             </p>
             <p>
               Looking for a reliable rent a car Karachi service? We offer

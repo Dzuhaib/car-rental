@@ -1,3 +1,4 @@
+import { BRAND } from "./site";
 import { vehicles } from "./fleet";
 
 export const pickupAreas = [
@@ -71,7 +72,7 @@ export function buildBookingMessage(details: BookingDetails): string {
   const days = tripDays(details.pickupDate, details.returnDate);
 
   const lines = [
-    `Hello Karachi Rental Car, I would like to book a car with driver.`,
+    `Hello ${BRAND.name}, I would like to book a car with driver.`,
     ``,
     `Trip type: ${details.tripType}`,
     `Pick-up area: ${details.area}`,

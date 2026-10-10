@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { vehicles, categoryLabels, formatPrice, getVehicle } from "@/lib/fleet";
-import { whatsappLink } from "@/lib/site";
+import { BRAND, whatsappLink } from "@/lib/site";
 
 type VehiclePageProps = PageProps<"/fleet/[slug]">;
 
@@ -49,7 +49,7 @@ export default async function VehiclePage({ params }: VehiclePageProps) {
   ];
 
   const vehicleWhatsApp = whatsappLink(
-    `Hello Karachi Rental Car, I would like to book the ${vehicle.name} with driver. Please share availability and rates.`,
+    `Hello ${BRAND.name}, I would like to book the ${vehicle.name} with driver. Please share availability and rates.`,
   );
 
   return (

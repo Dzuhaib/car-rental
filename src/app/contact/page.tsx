@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { Card } from "@/components/ui/Card";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { serviceAreas, whatsappLink } from "@/lib/site";
+import { BRAND, serviceAreas, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Message Karachi Rental Car on WhatsApp or call for a quote, an existing booking, or 24/7 airport assistance at Jinnah International Airport.",
+    `Message ${BRAND.name} on WhatsApp or call for a quote, an existing booking, or 24/7 airport assistance at Jinnah International Airport.`,
 };
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I have an enquiry about chauffeur-driven car rental in Karachi.",
+  `Hello ${BRAND.name}, I have an enquiry about chauffeur-driven car rental in Karachi.`,
 );
 
 export default function ContactPage() {
@@ -59,10 +59,10 @@ export default function ContactPage() {
                 <dt className="text-ink-500">Email</dt>
                 <dd className="mt-0.5 font-medium text-ink-900">
                   <a
-                    href="mailto:info@karachirentalcar.pk"
+                    href={`mailto:${BRAND.email}`}
                     className="hover:text-brand-700"
                   >
-                    info@karachirentalcar.pk
+                    {BRAND.email}
                   </a>
                 </dd>
               </div>

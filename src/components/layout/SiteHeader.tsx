@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -10,10 +9,11 @@ import { BRAND, whatsappLink } from "@/lib/site";
 
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
+import { Logo } from "../ui/Logo";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I would like to rent a car with driver in Karachi. Please share availability and rates.",
+  `Hello ${BRAND.name}, I would like to rent a car with driver in Karachi. Please share availability and rates.`,
 );
 
 export function SiteHeader() {
@@ -27,16 +27,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink-200 bg-white">
       <Container className="flex h-20 items-center justify-between gap-6">
-        <Link href="/" className="flex items-center" aria-label={BRAND.name}>
-          <Image
-            src="/logo.webp"
-            alt={BRAND.name}
-            width={168}
-            height={104}
-            priority
-            className="h-11 w-auto sm:h-12"
-          />
-        </Link>
+        <Logo />
 
         <nav className="hidden items-center gap-1 md:flex">
           {navigation.map((item) => {

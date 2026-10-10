@@ -1,13 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { SERVICE_LINKS } from "@/lib/navigation";
 import { BRAND, SITE_YEAR, serviceAreas, whatsappLink } from "@/lib/site";
 
 import { Container } from "../ui/Container";
+import { Logo } from "../ui/Logo";
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I would like to rent a car with driver in Karachi. Please share availability and rates.",
+  `Hello ${BRAND.name}, I would like to rent a car with driver in Karachi. Please share availability and rates.`,
 );
 
 export function SiteFooter() {
@@ -15,17 +15,11 @@ export function SiteFooter() {
     <footer className="border-t border-ink-200">
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image
-            src="/logo.webp"
-            alt={BRAND.name}
-            width={176}
-            height={110}
-            className="h-12 w-auto"
-          />
+          <Logo />
           <p className="mt-6 max-w-xs text-sm leading-6 text-ink-600">
-            Chauffeur-driven car rental in Karachi. Airport transfers, corporate
-            travel, wedding VIP cars, and inter-city journeys with transparent
-            pricing.
+            {BRAND.name} — chauffeur-driven car rental in Karachi. Airport
+            transfers, corporate travel, wedding VIP cars, and inter-city
+            journeys with transparent pricing.
           </p>
           <div className="mt-6 flex flex-col gap-2 text-sm">
             <a

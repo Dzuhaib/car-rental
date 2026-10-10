@@ -5,12 +5,12 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Section } from "@/components/ui/Section";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { whatsappLink } from "@/lib/site";
+import { whatsappLink, BRAND } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About us",
   description:
-    "Karachi Rental Car is a top-rated chauffeur-driven car rental company in Karachi, serving residents, corporate clients, families, and international travellers since day one.",
+    `${BRAND.name} is a top-rated chauffeur-driven car rental company in Karachi, serving residents, corporate clients, families, and international travellers since day one.`,
 };
 
 const values = [
@@ -29,7 +29,7 @@ const values = [
 ];
 
 const generalWhatsApp = whatsappLink(
-  "Hello Karachi Rental Car, I would like to know more about your chauffeur-driven car rental service.",
+  `Hello ${BRAND.name}, I would like to know more about your chauffeur-driven car rental service.`,
 );
 
 export default function AboutPage() {
@@ -45,11 +45,11 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
           <div className="space-y-5 text-lg leading-8 text-ink-600">
             <p>
-              Karachi Rental Car Company is a top-rated and trusted car rental
+              {BRAND.name} is a top-rated and trusted car rental
               service in Karachi. We offer clean cars, quick service, and honest
               communication. You can rent a car for business, travel, events, or
-              family trips — and at Karachi Rental Car Company, your comfort and
-              satisfaction come first.
+              family trips — and at {BRAND.name}, your comfort and satisfaction
+              come first.
             </p>
             <p>
               Our fleet ranges from economical sedans and executive vehicles to
