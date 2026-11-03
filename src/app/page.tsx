@@ -20,8 +20,8 @@ title: `Rent a Car in Karachi with Driver | ${BRAND.name}`,
 };
 
 const stats = [
-  { value: "4.9", label: "Google rating" },
-  { value: "5,000+", label: "Successful trips" },
+  { value: BRAND.rating, label: "Google rating" },
+  { value: BRAND.trips, label: "Successful trips" },
   { value: "24/7", label: "Airport & city cover" },
   { value: "12+", label: "Vehicles in fleet" },
 ];
@@ -207,22 +207,37 @@ export default function Home() {
                 Explore Luxury Fleet
               </Link>
             </div>
-
-            <dl className="mt-10 grid max-w-lg grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <dt className="text-2xl font-semibold text-ink-950">
-                    {stat.value}
-                  </dt>
-                  <dd className="mt-1 text-sm text-ink-600">{stat.label}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
           <div className="animate-fade-up">
             <BookingForm />
           </div>
+        </Container>
+      </section>
+
+      <section
+        aria-labelledby="stats-heading"
+        className="border-b border-ink-200 bg-ink-50/60"
+      >
+        <Container className="py-14 sm:py-16">
+          <h2 id="stats-heading" className="sr-only">
+            {BRAND.name} at a glance
+          </h2>
+          <dl className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center sm:text-left">
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="flex flex-col">
+                  <span className="text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">
+                    {stat.value}
+                  </span>
+                  <span className="mt-2 text-sm font-medium tracking-wide text-ink-600">
+                    {stat.label}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
 
